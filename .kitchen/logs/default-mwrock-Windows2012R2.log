@@ -1,0 +1,78 @@
+I, [2018-01-18T20:29:51.444325 #7680]  INFO -- default-mwrock-Windows2012R2: -----> Converging <default-mwrock-Windows2012R2>...
+I, [2018-01-18T20:29:51.445825 #7680]  INFO -- default-mwrock-Windows2012R2: Preparing files for transfer
+I, [2018-01-18T20:29:51.446325 #7680]  INFO -- default-mwrock-Windows2012R2: Preparing dna.json
+I, [2018-01-18T20:29:51.447325 #7680]  INFO -- default-mwrock-Windows2012R2: Resolving cookbook dependencies with Berkshelf 5.6.4...
+I, [2018-01-18T20:29:51.642350 #7680]  INFO -- default-mwrock-Windows2012R2: Removing non-cookbook files before transfer
+I, [2018-01-18T20:29:51.699357 #7680]  INFO -- default-mwrock-Windows2012R2: Preparing validation.pem
+I, [2018-01-18T20:29:51.700357 #7680]  INFO -- default-mwrock-Windows2012R2: Preparing client.rb
+I, [2018-01-18T20:29:54.449706 #7680]  INFO -- default-mwrock-Windows2012R2: Transferring files to <default-mwrock-Windows2012R2>
+E, [2018-01-18T20:29:55.297814 #7680] ERROR -- default-mwrock-Windows2012R2: Converge failed on instance <default-mwrock-Windows2012R2>.
+E, [2018-01-18T20:29:55.297814 #7680] ERROR -- default-mwrock-Windows2012R2: ------Exception-------
+E, [2018-01-18T20:29:55.297814 #7680] ERROR -- default-mwrock-Windows2012R2: Class: WinRM::FS::Core::FileTransporterFailed
+E, [2018-01-18T20:29:55.298314 #7680] ERROR -- default-mwrock-Windows2012R2: Message: [WinRM::FS::Core::FileTransporter] Upload failed (exitcode: 0), but stderr present
+Cannot create "C:\tmp\kitchen" because a file or directory with the same name already exists.
+At line:12 char:40
++   $path | ? {-not (test-path $_)} | % {$null = mkdir $_}
++                                        ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\tmp\kitchen\cookbooks:String) [New-Item], IOException
+    + FullyQualifiedErrorId : CreateDirectoryIOError,Microsoft.PowerShell.Commands.NewItemCommand
+Could not find a part of the path 'C:\tmp\kitchen\cookbooks\'.
+At line:47 char:17
++   dir $unpack | cp -dest "$dst/" -force -recurse
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (metadata.json:FileInfo) [Copy-Item], DirectoryNotFoundException
+    + FullyQualifiedErrorId : CopyDirectoryInfoItemIOError,Microsoft.PowerShell.Commands.CopyItemCommand
+Could not find a part of the path 'C:\tmp\kitchen\cookbooks\'.
+At line:47 char:17
++   dir $unpack | cp -dest "$dst/" -force -recurse
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (README.md:FileInfo) [Copy-Item], DirectoryNotFoundException
+    + FullyQualifiedErrorId : CopyDirectoryInfoItemIOError,Microsoft.PowerShell.Commands.CopyItemCommand
+Could not find a part of the path 'C:\tmp\kitchen\cookbooks\'.
+At line:47 char:17
++   dir $unpack | cp -dest "$dst/" -force -recurse
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (default.rb:FileInfo) [Copy-Item], DirectoryNotFoundException
+    + FullyQualifiedErrorId : CopyDirectoryInfoItemIOError,Microsoft.PowerShell.Commands.CopyItemCommand
+Could not find a part of the path 'C:\tmp\kitchen\cookbooks\'.
+At line:47 char:17
++   dir $unpack | cp -dest "$dst/" -force -recurse
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (Default.htm.erb:FileInfo) [Copy-Item], DirectoryNotFoundException
+    + FullyQualifiedErrorId : CopyDirectoryInfoItemIOError,Microsoft.PowerShell.Commands.CopyItemCommand
+Cannot create "C:\tmp\kitchen" because a file or directory with the same name already exists.
+At line:12 char:40
++   $path | ? {-not (test-path $_)} | % {$null = mkdir $_}
++                                        ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\tmp\kitchen\cache:String) [New-Item], IOException
+    + FullyQualifiedErrorId : CreateDirectoryIOError,Microsoft.PowerShell.Commands.NewItemCommand
+
+E, [2018-01-18T20:29:55.298314 #7680] ERROR -- default-mwrock-Windows2012R2: ----------------------
+E, [2018-01-18T20:29:55.298314 #7680] ERROR -- default-mwrock-Windows2012R2: ------Backtrace-------
+E, [2018-01-18T20:29:55.298314 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/winrm-fs-1.0.1/lib/winrm-fs/core/file_transporter.rb:368:in `parse_response'
+E, [2018-01-18T20:29:55.298314 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/winrm-fs-1.0.1/lib/winrm-fs/core/file_transporter.rb:268:in `extract_files'
+E, [2018-01-18T20:29:55.298314 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/winrm-fs-1.0.1/lib/winrm-fs/core/file_transporter.rb:95:in `block in upload'
+E, [2018-01-18T20:29:55.298314 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2018-01-18T20:29:55.298314 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/winrm-fs-1.0.1/lib/winrm-fs/core/file_transporter.rb:94:in `upload'
+E, [2018-01-18T20:29:55.298314 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/transport/winrm.rb:130:in `upload'
+E, [2018-01-18T20:29:55.298314 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/provisioner/base.rb:72:in `block in call'
+E, [2018-01-18T20:29:55.298314 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/transport/base.rb:89:in `initialize'
+E, [2018-01-18T20:29:55.298814 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/transport/winrm.rb:422:in `new'
+E, [2018-01-18T20:29:55.298814 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/transport/winrm.rb:422:in `create_new_connection'
+E, [2018-01-18T20:29:55.298814 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/transport/winrm.rb:74:in `connection'
+E, [2018-01-18T20:29:55.298814 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/provisioner/base.rb:68:in `call'
+E, [2018-01-18T20:29:55.298814 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:384:in `block in converge_action'
+E, [2018-01-18T20:29:55.298814 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:527:in `synchronize_or_call'
+E, [2018-01-18T20:29:55.298814 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:489:in `block in action'
+E, [2018-01-18T20:29:55.298814 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2018-01-18T20:29:55.298814 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:488:in `action'
+E, [2018-01-18T20:29:55.298814 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:380:in `converge_action'
+E, [2018-01-18T20:29:55.298814 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:359:in `block in transition_to'
+E, [2018-01-18T20:29:55.299314 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:358:in `each'
+E, [2018-01-18T20:29:55.299314 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:358:in `transition_to'
+E, [2018-01-18T20:29:55.299314 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:135:in `converge'
+E, [2018-01-18T20:29:55.299314 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/command.rb:197:in `public_send'
+E, [2018-01-18T20:29:55.299314 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2018-01-18T20:29:55.299314 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2018-01-18T20:29:55.299314 #7680] ERROR -- default-mwrock-Windows2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/logging-2.1.0/lib/logging/diagnostic_context.rb:450:in `block in create_with_logging_context'
+E, [2018-01-18T20:29:55.299314 #7680] ERROR -- default-mwrock-Windows2012R2: ----End Backtrace-----

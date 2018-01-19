@@ -1,0 +1,3 @@
+I, [2018-01-19T15:28:19.365341 #8252]  INFO -- Kitchen: -----> Starting Kitchen (v1.15.0)
+I, [2018-01-19T15:28:23.103554 #8252]  INFO -- Kitchen: -----> Destroying <iis-Windows2012R2>...
+I, [2018-01-19T15:28:27.707818 #8252]  INFO -- Kitchen: -----> Kitchen is finished. (0m8.34s)

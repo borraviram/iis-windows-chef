@@ -1,0 +1,107 @@
+I, [2018-01-18T19:09:15.782926 #4516]  INFO -- default-windows-2012R2: -----> Creating <default-windows-2012R2>...
+I, [2018-01-18T19:09:16.746981 #4516]  INFO -- default-windows-2012R2: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2018-01-18T19:09:17.127003 #4516]  INFO -- default-windows-2012R2: ==> default: Box 'windows-2012R2' could not be found. Attempting to find and install...
+I, [2018-01-18T19:09:17.127003 #4516]  INFO -- default-windows-2012R2:     default: Box Provider: virtualbox
+I, [2018-01-18T19:09:17.127003 #4516]  INFO -- default-windows-2012R2:     default: Box Version: >= 0
+I, [2018-01-18T19:09:17.357016 #4516]  INFO -- default-windows-2012R2: ==> default: Box file was not detected as metadata. Adding it directly...
+I, [2018-01-18T19:09:17.357016 #4516]  INFO -- default-windows-2012R2: ==> default: Adding box 'windows-2012R2' (v0) for provider: virtualbox
+I, [2018-01-18T19:09:17.357016 #4516]  INFO -- default-windows-2012R2:     default: Downloading: windows-2012R2
+I, [2018-01-18T19:09:17.397018 #4516]  INFO -- default-windows-2012R2: [K    default: 
+I, [2018-01-18T19:09:17.397018 #4516]  INFO -- default-windows-2012R2: An error occurred while downloading the remote file. The error
+I, [2018-01-18T19:09:17.397018 #4516]  INFO -- default-windows-2012R2: message, if any, is reproduced below. Please fix this error and try
+I, [2018-01-18T19:09:17.397018 #4516]  INFO -- default-windows-2012R2: again.
+I, [2018-01-18T19:09:17.397018 #4516]  INFO -- default-windows-2012R2: 
+I, [2018-01-18T19:09:17.397018 #4516]  INFO -- default-windows-2012R2: Couldn't open file /D:/vikram/git-repo/iis-cookbook/learn_chef_iis/.kitchen/kitchen-vagrant/kitchen-learn_chef_iis-default-windows-2012R2/windows-2012R2
+E, [2018-01-18T19:09:17.417019 #4516] ERROR -- default-windows-2012R2: Create failed on instance <default-windows-2012R2>.
+E, [2018-01-18T19:09:17.417019 #4516] ERROR -- default-windows-2012R2: ------Exception-------
+E, [2018-01-18T19:09:17.417019 #4516] ERROR -- default-windows-2012R2: Class: Kitchen::ShellOut::ShellCommandFailed
+E, [2018-01-18T19:09:17.417019 #4516] ERROR -- default-windows-2012R2: Message: Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Box 'windows-2012R2' could not be found. Attempting to find and install...
+    default: Box Provider: virtualbox
+    default: Box Version: >= 0
+==> default: Box file was not detected as metadata. Adding it directly...
+==> default: Adding box 'windows-2012R2' (v0) for provider: virtualbox
+    default: Downloading: windows-2012R2
+[K    default:
+STDERR: An error occurred while downloading the remote file. The error
+message, if any, is reproduced below. Please fix this error and try
+again.
+
+Couldn't open file /D:/vikram/git-repo/iis-cookbook/learn_chef_iis/.kitchen/kitchen-vagrant/kitchen-learn_chef_iis-default-windows-2012R2/windows-2012R2
+---- End output of vagrant up --no-provision --provider virtualbox ----
+Ran vagrant up --no-provision --provider virtualbox returned 1
+E, [2018-01-18T19:09:17.417019 #4516] ERROR -- default-windows-2012R2: ----------------------
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: ------Backtrace-------
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/shell_out.rb:71:in `rescue in run_command'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/shell_out.rb:59:in `run_command'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/Users/Admin/AppData/Local/chefdk/gem/ruby/2.3.0/gems/kitchen-vagrant-1.0.2/lib/kitchen/driver/vagrant.rb:412:in `run_command'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/Users/Admin/AppData/Local/chefdk/gem/ruby/2.3.0/gems/kitchen-vagrant-1.0.2/lib/kitchen/driver/vagrant.rb:359:in `run'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/Users/Admin/AppData/Local/chefdk/gem/ruby/2.3.0/gems/kitchen-vagrant-1.0.2/lib/kitchen/driver/vagrant.rb:443:in `run_vagrant_up'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/Users/Admin/AppData/Local/chefdk/gem/ruby/2.3.0/gems/kitchen-vagrant-1.0.2/lib/kitchen/driver/vagrant.rb:104:in `create'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:460:in `public_send'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:460:in `block in perform_action'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:524:in `block in synchronize_or_call'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:522:in `synchronize'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:522:in `synchronize_or_call'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:489:in `block in action'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:488:in `action'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:460:in `perform_action'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:370:in `create_action'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:359:in `block in transition_to'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:358:in `each'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:358:in `transition_to'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:124:in `create'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/command.rb:197:in `public_send'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/logging-2.1.0/lib/logging/diagnostic_context.rb:450:in `block in create_with_logging_context'
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: ----End Backtrace-----
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: ---Nested Exception---
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: Class: Mixlib::ShellOut::ShellCommandFailed
+E, [2018-01-18T19:09:17.418019 #4516] ERROR -- default-windows-2012R2: Message: Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Box 'windows-2012R2' could not be found. Attempting to find and install...
+    default: Box Provider: virtualbox
+    default: Box Version: >= 0
+==> default: Box file was not detected as metadata. Adding it directly...
+==> default: Adding box 'windows-2012R2' (v0) for provider: virtualbox
+    default: Downloading: windows-2012R2
+[K    default:
+STDERR: An error occurred while downloading the remote file. The error
+message, if any, is reproduced below. Please fix this error and try
+again.
+
+Couldn't open file /D:/vikram/git-repo/iis-cookbook/learn_chef_iis/.kitchen/kitchen-vagrant/kitchen-learn_chef_iis-default-windows-2012R2/windows-2012R2
+---- End output of vagrant up --no-provision --provider virtualbox ----
+Ran vagrant up --no-provision --provider virtualbox returned 1
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: ----------------------
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: ------Backtrace-------
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/shell_out.rb:71:in `rescue in run_command'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/shell_out.rb:59:in `run_command'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/Users/Admin/AppData/Local/chefdk/gem/ruby/2.3.0/gems/kitchen-vagrant-1.0.2/lib/kitchen/driver/vagrant.rb:412:in `run_command'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/Users/Admin/AppData/Local/chefdk/gem/ruby/2.3.0/gems/kitchen-vagrant-1.0.2/lib/kitchen/driver/vagrant.rb:359:in `run'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/Users/Admin/AppData/Local/chefdk/gem/ruby/2.3.0/gems/kitchen-vagrant-1.0.2/lib/kitchen/driver/vagrant.rb:443:in `run_vagrant_up'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/Users/Admin/AppData/Local/chefdk/gem/ruby/2.3.0/gems/kitchen-vagrant-1.0.2/lib/kitchen/driver/vagrant.rb:104:in `create'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:460:in `public_send'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:460:in `block in perform_action'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:524:in `block in synchronize_or_call'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:522:in `synchronize'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:522:in `synchronize_or_call'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:489:in `block in action'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:488:in `action'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:460:in `perform_action'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:370:in `create_action'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:359:in `block in transition_to'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:358:in `each'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:358:in `transition_to'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/instance.rb:124:in `create'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/command.rb:197:in `public_send'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2018-01-18T19:09:17.419019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.15.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2018-01-18T19:09:17.420019 #4516] ERROR -- default-windows-2012R2: C:/opscode/chefdk/embedded/lib/ruby/gems/2.3.0/gems/logging-2.1.0/lib/logging/diagnostic_context.rb:450:in `block in create_with_logging_context'
+E, [2018-01-18T19:09:17.420019 #4516] ERROR -- default-windows-2012R2: ----End Backtrace-----
